@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jill & David — A Kyoto Vow Renewal | Married in Japan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF8F5;
+    --dark: #1a1a1a;
+    --darker: #111111;
+    --burgundy: #722F37;
+    --gold: #B8977E;
+    --text-dark: #1a1a1a;
+    --text-grey: #888;
+    --text-light: rgba(250, 248, 245, 0.75);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+  }
+
+  h1 { font-size: clamp(48px, 6vw, 80px); line-height: 1.1; }
+  h2 { font-size: clamp(36px, 4vw, 52px); line-height: 1.15; }
+  h3 { font-size: clamp(22px, 2.5vw, 28px); font-weight: 400; line-height: 1.3; }
+  h4 { font-size: 20px; font-weight: 500; }
+
+  p { margin-bottom: 18px; }
+  p:last-child { margin-bottom: 0; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  section {
+    padding: 100px 0;
+  }
+
+  section.large {
+    padding: 140px 0;
+  }
+
+  .section-light {
+    background: var(--cream);
+    color: var(--text-dark);
+  }
+
+  .section-dark {
+    background: var(--dark);
+    color: var(--cream);
+  }
+
+  .section-burgundy {
+    background: var(--burgundy);
+    color: var(--cream);
+  }
+
+  .label {
+    font-family: 'Sen', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .accent-line {
+    width: 40px;
+    height: 2px;
+    background: var(--burgundy);
+    margin: 24px 0;
+  }
+
+  .section-dark .accent-line {
+    background: var(--gold);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--dark);
+    color: var(--cream);
+  }
+
+  .hero-image {
+    background: url('photo-1493976040374-85c8e12f0c0e.avif') center/cover no-repeat;
+    min-height: 100vh;
+  }
+
+  .hero-content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+  }
+
+  .hero-content {
+    max-width: 480px;
+  }
+
+  .hero h1 {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  .hero .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(250, 248, 245, 0.85);
+    margin-bottom: 40px;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-family: 'Sen', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(250, 248, 245, 0.85);
+    margin-top: 30px;
+  }
+
+  .hero-meta-item span {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  /* IMAGE BREAK */
+  .image-break {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .image-break::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.25));
+  }
+
+  /* PROSE */
+  .prose-section {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .prose-section h2 {
+    margin-bottom: 32px;
+  }
+
+  .prose-section p {
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 24px;
+    color: #2a2a2a;
+  }
+
+  .section-dark .prose-section p {
+    color: var(--text-light);
+  }
+
+  /* THE DAY OVERVIEW */
+  .day-flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .day-flow-item {
+    text-align: center;
+  }
+
+  .day-flow-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .day-flow-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+
+  .day-flow-item p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* SCENARIO SECTIONS */
+  .scenario-intro {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .scenario-intro h2 {
+    margin-bottom: 24px;
+  }
+
+  .scenario-intro p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 17px;
+  }
+
+  .recommendation-banner {
+    display: inline-block;
+    font-family: 'Sen', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    background: rgba(114, 47, 55, 0.06);
+    padding: 8px 16px;
+    margin-bottom: 24px;
+  }
+
+  .section-dark .recommendation-banner {
+    color: var(--gold);
+    background: rgba(184, 151, 126, 0.1);
+  }
+
+  .venue-pair {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  .venue-card-primary {
+    padding: 40px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .section-dark .venue-card-primary {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .venue-card-alt {
+    padding: 36px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: transparent;
+  }
+
+  .section-dark .venue-card-alt {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .venue-card-primary h3,
+  .venue-card-alt h3 {
+    margin-bottom: 12px;
+  }
+
+  .venue-meta {
+    font-family: 'Sen', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-grey);
+    margin-bottom: 20px;
+  }
+
+  .section-dark .venue-meta {
+    color: rgba(250, 248, 245, 0.55);
+  }
+
+  .venue-card-primary p,
+  .venue-card-alt p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .venue-image {
+    width: 100%;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 24px;
+  }
+
+  .venue-card-alt-label {
+    font-family: 'Sen', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-grey);
+    margin-bottom: 12px;
+  }
+
+  .section-dark .venue-card-alt-label {
+    color: rgba(250, 248, 245, 0.5);
+  }
+
+  /* WHAT WE HANDLE */
+  .handle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+  }
+
+  .handle-grid h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: var(--cream);
+  }
+
+  .handle-grid ul {
+    list-style: none;
+  }
+
+  .handle-grid li {
+    font-size: 15px;
+    color: var(--text-light);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    line-height: 1.6;
+  }
+
+  .handle-grid li:last-child {
+    border-bottom: none;
+  }
+
+  .you-handle {
+    margin-top: 60px;
+    padding: 36px;
+    border: 1px solid rgba(184, 151, 126, 0.25);
+    background: rgba(184, 151, 126, 0.04);
+  }
+
+  .you-handle h4 {
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .you-handle p {
+    color: var(--text-light);
+    font-size: 15px;
+  }
+
+  /* INVESTMENT */
+  .planning-fee-box {
+    text-align: center;
+    padding: 50px 40px;
+    border: 2px solid var(--burgundy);
+    margin: 50px auto 70px;
+    max-width: 560px;
+  }
+
+  .planning-fee-box .label {
+    color: var(--burgundy);
+    margin-bottom: 8px;
+  }
+
+  .planning-fee-box .fee-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 64px);
+    font-weight: 300;
+    color: var(--burgundy);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .planning-fee-box .fee-note {
+    font-size: 13px;
+    color: var(--text-grey);
+    letter-spacing: 1px;
+  }
+
+  .scenario-cost {
+    margin-bottom: 60px;
+  }
+
+  .scenario-cost-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .scenario-cost-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .scenario-cost-header .scenario-cost-venue {
+    font-size: 13px;
+    color: var(--text-grey);
+    letter-spacing: 1px;
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .cost-table th, .cost-table td {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-family: 'Sen', sans-serif;
+    font-size: 15px;
+  }
+
+  .cost-table th {
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--text-grey);
+  }
+
+  .cost-table td:last-child,
+  .cost-table th:last-child {
+    text-align: right;
+  }
+
+  .cost-table .total-row td {
+    font-weight: 700;
+    font-size: 17px;
+    border-top: 2px solid var(--burgundy);
+    border-bottom: none;
+    padding-top: 20px;
+  }
+
+  .recommended-tag {
+    display: inline-block;
+    font-family: 'Sen', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    background: rgba(114, 47, 55, 0.08);
+    padding: 4px 10px;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+
+  /* NEXT STEPS */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+
+  .step-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  .payment-terms {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* CLOSING */
+  .closing {
+    text-align: center;
+    padding: 120px 28px;
+  }
+
+  .closing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: var(--cream);
+  }
+
+  .closing-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .closing-mij {
+    font-family: 'Sen', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(250, 248, 245, 0.7);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .venue-pair {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .day-flow {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .steps-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .handle-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 28px;
+    }
+    section {
+      padding: 70px 0;
+    }
+    section.large {
+      padding: 90px 0;
+    }
+    .image-break {
+      height: 35vh;
+    }
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-image {
+      min-height: 50vh;
+    }
+    .hero-content-wrap {
+      padding: 60px 28px;
+    }
+    .hero-meta {
+      gap: 24px;
+    }
+    .venue-card-primary,
+    .venue-card-alt {
+      padding: 28px;
+    }
+    .planning-fee-box {
+      padding: 36px 24px;
+    }
+  }
+
+  /* SCROLL ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-image"></div>
+  <div class="hero-content-wrap">
+    <div class="hero-content">
+      <h1>Jill & David</h1>
+      <p class="hero-tagline">Thirty-five years, marked quietly in a Kyoto garden</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span>Date</span>28 May 2026</div>
+        <div class="hero-meta-item"><span>Location</span>Kyoto, Japan</div>
+        <div class="hero-meta-item"><span>Guests</span>Family of six</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR VISION -->
+<section class="section-light large">
+  <div class="container">
+    <div class="prose-section fade-in">
+      <span class="label">Your Vision</span>
+      <h2>A morning in a quiet garden, with the people you love most.</h2>
+      <div class="accent-line"></div>
+      <p>You started dating in college. Thirty-five years later, you're walking into a Japanese garden with your two adult children, your son's wife, and your daughter's partner. The six of you. That's it.</p>
+      <p>You don't want a vow renewal in the traditional sense. You're not going anywhere, and you don't need to renew anything. What you want is a quiet acknowledgement of the journey. Your son and daughter will speak first. They'll say what's on their hearts about family, about the two of you, about being part of this story. Then you and David will say something to each other. Not vows, exactly. An expression of appreciation. A recognition of where you've been.</p>
+      <p>At the end, the family gathers in a circle. A guitarist and violinist play "The Blessing." You pray over each other and over the generations to come. It's intimate, and it's brief, and it carries the weight of three and a half decades.</p>
+      <p>You want it to feel soulful, not staged. You've described yourself as a high-maintenance person who works hard to look low-maintenance. The day should feel that way too: composed but never performed. As though the family simply happened to be in this beautiful place, and something quietly meaningful happened there.</p>
+      <p>You've been carrying a small worry since the photographer in Spain didn't show. That won't happen here. The photographer is editorial, their work captures stories rather than poses, and they will be there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE DAY -->
+<section class="section-dark large">
+  <div class="container">
+    <div class="prose-section fade-in" style="text-align: center;">
+      <span class="label">Thursday, 28 May 2026</span>
+      <h2 style="color: var(--cream);">The shape of the day.</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+      <p>The ceremony itself is fifteen to twenty minutes. The rest of the day is yours: Kyoto, sightseeing, time as a family. Two ways to think about timing.</p>
+    </div>
+
+    <div class="venue-pair fade-in" style="grid-template-columns: 1fr 1fr;">
+      <div class="venue-card-primary">
+        <div class="venue-meta">Option A · Morning Ceremony</div>
+        <h3>Begin the day with it.</h3>
+        <p>The family arrives at the garden as the morning light comes through the trees. The ceremony happens before the city is awake, before any tourist crowd. Photographer present, musicians playing, family present. By late morning, you are back at the hotel.</p>
+        <p>The rest of the day belongs to Kyoto. Sightseeing, the custom rings shop, lunch somewhere quiet. The family reconnects in the evening for dinner together. There is a clean separation between the ceremony and the rest of the trip, which suits the "we just happened to be here" tone.</p>
+      </div>
+      <div class="venue-card-primary">
+        <div class="venue-meta">Option B · Late Afternoon Into Sunset</div>
+        <h3>Build toward it.</h3>
+        <p>The day starts as a sightseeing day. Temples in the morning, lunch somewhere good, an unhurried afternoon. As the light begins to soften, the family arrives at the garden. The ceremony happens in the golden hour. The photographer captures the family in the warmest light of the day.</p>
+        <p>From the ceremony, the family walks straight to dinner. No changing back into casual clothes, no break in the rhythm. The whole evening is one continuous celebration. The trade-off: more crowds during midday sightseeing, and the ceremony has to fit around restaurant timing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO 1 -->
+<section class="section-light large">
+  <div class="container">
+    <div class="scenario-intro fade-in">
+      <span class="label">Scenario One</span>
+      <h2>Hotel Garden Kyoto</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+      <p>A ceremony staged on a piece of Kyoto's living cultural heritage. Architectural, dramatic, unforgettable. The kind of setting that defines the photographs forever.</p>
+    </div>
+
+    <div class="venue-pair fade-in">
+      <div class="venue-card-primary">
+        <span class="recommendation-banner">Our Recommendation</span>
+        <div class="venue-image" style="background-image: url('BT Kyoto noh stage.jpg');">
+          <!-- search hint: Banyan Tree Higashiyama Kyoto Noh stage, Kengo Kuma architecture, bamboo grove, hilltop view, traditional Japanese performance stage -->
+        </div>
+        <div class="venue-meta">Banyan Tree Higashiyama Kyoto · Higashiyama</div>
+        <h3>The Noh Stage</h3>
+        <p>You arrive on a six-hundred-year-old performance art form preserved in architecture. The stage was designed by Kengo Kuma, one of the most celebrated living Japanese architects, and it sits on a hilltop above Gion in the Higashiyama district. Bamboo grove behind it. Stone path leading to it. Built for stillness and presence, which is exactly the tone you want.</p>
+        <p>The violinist plays the Bridgerton theme as the family arrives. The Noh stage holds the ceremony. The song "The Blessing" closes it. Afterward, the family walks down to Ryozen, the property's kaiseki restaurant, which overlooks the bamboo garden and the stage where you just stood. Dinner that evening is in a private room with a view of the place where the day began.</p>
+        <p>Banyan Tree only opened in Japan in 2024. It is one of the most coveted new luxury properties in Kyoto, and the Noh stage is unique to it.</p>
+      </div>
+
+      <div class="venue-card-alt">
+        <span class="venue-card-alt-label">Alternative</span>
+        <div class="venue-image" style="background-image: url('four seasons.jpg');">
+          <!-- search hint: Four Seasons Hotel Kyoto Shakusui-en pond garden with central tree island, 800 year old garden, lush green, traditional Japanese pond garden -->
+        </div>
+        <div class="venue-meta">Four Seasons Hotel Kyoto · Higashiyama</div>
+        <h3>Shakusui-en Pond Garden</h3>
+        <p>An eight-hundred-year-old pond garden inside the grounds of the Four Seasons. The ceremony takes place on a small island at the centre of the pond, beneath an ancient tree. Softer than the Noh stage, lusher, more pastoral. Dinner afterward at FUJU, the property's traditional teahouse, or at Sushi Wakon (one Michelin star).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO 2 -->
+<section class="section-dark large">
+  <div class="container">
+    <div class="scenario-intro fade-in">
+      <span class="label">Scenario Two</span>
+      <h2 style="color: var(--cream);">Zen Temple Garden</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+      <p>A private Zen sub-temple, opened only for the family. The most authentically Kyoto of the three settings, and the most private. The sub-temples in the Myoshin-ji complex are not on the tourist circuit, and we have direct relationships with the head priests at both.</p>
+    </div>
+
+    <div class="venue-pair fade-in">
+      <div class="venue-card-primary">
+        <span class="recommendation-banner">Primary</span>
+        <div class="venue-image" style="background-image: url('taizoin.jpg');">
+          <!-- search hint: Taizo-in temple Yoko-en garden Kyoto Myoshinji, lush stroll garden with pond, weeping cherry, irises, azaleas, no people, peaceful -->
+        </div>
+        <div class="venue-meta">Taizo-in · Myoshin-ji Complex</div>
+        <h3>The Yoko-en Garden</h3>
+        <p>Taizo-in was founded in 1404. It is the oldest sub-temple in the Myoshin-ji Zen Buddhist complex, and its Yoko-en garden, built in 1965, is one of the loveliest stroll gardens in the city. A pond sits at the centre. Weeping cherries hang over it. Azaleas, irises, and moss soften every edge. In late May, the garden is at its peak: lush, green, alive with colour.</p>
+        <p>The ceremony happens in the garden. The family arrives along a stone path; the musicians play; you and David and the children stand together on a wooden veranda or beside the pond. The garden does the work. Nothing has to be staged because the setting itself carries the meaning.</p>
+        <p>Dinner afterward is at one of the kaiseki restaurants in central Kyoto. We choose the right room, the right cuisine, the right table.</p>
+      </div>
+
+      <div class="venue-card-alt">
+        <span class="venue-card-alt-label">Alternative</span>
+        <div class="venue-image" style="background-image: url('shunkoin1.jpg');">
+          <!-- search hint: Shunkoin temple Kyoto, smaller Zen sub-temple garden, intimate, traditional architecture, soft natural light, no people -->
+        </div>
+        <div class="venue-meta">Shunkoin · Myoshin-ji Complex</div>
+        <h3>A Smaller Sanctuary</h3>
+        <p>Shunkoin is a smaller, quieter sub-temple in the same Myoshin-ji complex. The head priest, Reverend Takafumi Kawakami, is fluent in English and has hosted private gatherings for visitors from around the world for many years. The garden is more modest than Taizo-in's but the privacy is absolute, and the head priest's familiarity with international families is rare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO 3 -->
+<section class="section-light large">
+  <div class="container">
+    <div class="scenario-intro fade-in">
+      <span class="label">Scenario Three</span>
+      <h2>Private Heritage Garden</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+      <p>A Meiji-era garden in the Nanzen-ji villa district, designed by the most legendary Japanese garden designer of the modern era. Privately held. Rarely opened. We negotiate access for the morning of your ceremony.</p>
+    </div>
+
+    <div class="venue-pair fade-in" style="grid-template-columns: 1fr;">
+      <div class="venue-card-primary" style="max-width: 720px; margin: 0 auto;">
+        <div class="venue-image" style="background-image: url('tairyu sanso.jpg'); height: 360px;">
+          <!-- search hint: Tairyu-Sanso garden Kyoto, Ogawa Jihei design, Meiji era villa, pond stream waterfall, mossy stones, Higashiyama mountains shakkei borrowed scenery, lush green late spring, no people -->
+        </div>
+        <div class="venue-meta">Tairyu-Sanso · Higashiyama, Nanzen-ji villa district</div>
+        <h3>An Ogawa Jihei Garden, Privately Opened</h3>
+        <p>Tairyu-Sanso was built between 1896 and 1899 on the former site of a Nanzen-ji sub-temple. Ogawa Jihei VII, widely regarded as the greatest Japanese garden designer of the modern era, redesigned the garden between 1901 and 1905. The site is a designated National Place of Scenic Beauty. Lawn, pond, stream, waterfall, water mill. A teahouse. Stone arrangements set against the Higashiyama mountains as borrowed scenery.</p>
+        <p>The garden is privately owned and rarely accessible. Unlike the public heritage gardens in Kyoto, Tairyu-Sanso is only opened by special arrangement. The family arrives in the morning, the musicians set up beside the pond or near the teahouse, and the ceremony unfolds in a garden that almost no one else will see that day. The photographs are unrepeatable: late-spring foliage, mountain light, water moving through the frame.</p>
+        <p>This is the closest match in Kyoto to the lush, cinematic feel you described from the Hawaii vow renewal you sent us. Less polished than a hotel garden. Less curated than a temple. Quieter, rarer, and more alive than either.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE HANDLE -->
+<section class="section-dark large">
+  <div class="container">
+    <div class="prose-section fade-in" style="text-align: center;">
+      <span class="label">What We Handle</span>
+      <h2 style="color: var(--cream);">From now until the ceremony.</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+      <p>You came to us because you didn't want to roll the dice on a photographer who might not show up, or pick the wrong garden, or end up rushing on the morning of your anniversary. From the moment you commit, none of that is yours to carry.</p>
+    </div>
+
+    <div class="handle-grid fade-in">
+      <div>
+        <h4>Before the Ceremony</h4>
+        <ul>
+          <li>Lock the venue and confirm private access</li>
+          <li>Source and book the photographer (editorial style, vetted portfolio, deposit secured)</li>
+          <li>Source and brief the guitarist and violinist on all three songs</li>
+          <li>Florals: bouquet and any small arrangements in your palette</li>
+          <li>Custom rings shop appointment booked for the day prior</li>
+          <li>Dinner reservation in a private room at a kaiseki or fine-dining restaurant</li>
+          <li>Transportation between hotel, ceremony, and dinner</li>
+          <li>Weather contingency planning</li>
+          <li>WhatsApp coordination with you throughout</li>
+          <li>Bilingual communication with all Japanese vendors</li>
+        </ul>
+      </div>
+      <div>
+        <h4>On the Day</h4>
+        <ul>
+          <li>Eamon and Juri on-site for the ceremony</li>
+          <li>Vendor arrival and setup managed entirely by us</li>
+          <li>Family timing kept on track without anyone being managed</li>
+          <li>Photographer briefed on your preferred editorial style</li>
+          <li>Music cued for the arrival, the ceremony, and the closing</li>
+          <li>Florals delivered and placed</li>
+          <li>Transportation coordinated</li>
+          <li>Dinner reservation reconfirmed and any pre-dinner setup handled</li>
+          <li>If anything goes wrong, you don't see it</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="you-handle fade-in">
+      <h4>What You Handle</h4>
+      <p>Your outfits. Your hair and makeup. The words you and David will say to each other, and the words your son and daughter will speak. Everything else is ours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="section-light large">
+  <div class="container">
+    <div class="prose-section fade-in" style="text-align: center;">
+      <span class="label">Investment</span>
+      <h2>Three options, three price ranges.</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+      <p>Every line below is our best estimate based on current Kyoto vendor rates for late May 2026. Final numbers will be locked once you choose a scenario and we open inquiries with the specific venue.</p>
+    </div>
+
+    <div class="planning-fee-box fade-in">
+      <span class="label">Our Planning Fee</span>
+      <div class="fee-amount">$5,000 USD</div>
+      <div class="fee-note">Flat. Regardless of which scenario you choose.</div>
+    </div>
+
+    <div class="fade-in">
+      <div class="scenario-cost">
+        <div class="scenario-cost-header">
+          <h3>Scenario One: Hotel Garden Kyoto <span class="recommended-tag">Our Pick</span></h3>
+          <div class="scenario-cost-venue">Banyan Tree Higashiyama Kyoto · Noh Stage</div>
+        </div>
+        <table class="cost-table">
+          <thead>
+            <tr><th>Item</th><th>Estimated Range (USD)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Venue, ceremony coordination, florals, setup</td><td>$2,500</td></tr>
+            <tr><td>Editorial photographer (half-day, vetted)</td><td>$700 – $1,000</td></tr>
+            <tr><td>Musicians (guitarist + violinist, three songs briefed)</td><td>$300 – $400</td></tr>
+            <tr><td>Private dinner at Ryozen (kaiseki, six guests)</td><td>$1,000</td></tr>
+            <tr><td>MIJ planning fee</td><td>$5,000</td></tr>
+            <tr class="total-row"><td>Total estimated investment</td><td>$9,500 – $9,900</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="scenario-cost">
+        <div class="scenario-cost-header">
+          <h3>Scenario Two: Zen Temple Garden</h3>
+          <div class="scenario-cost-venue">Taizo-in · Yoko-en Garden, Myoshin-ji Complex</div>
+        </div>
+        <table class="cost-table">
+          <thead>
+            <tr><th>Item</th><th>Estimated Range (USD)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Temple private use fee and donation</td><td>$1,500 – $2,000</td></tr>
+            <tr><td>Editorial photographer (half-day, vetted)</td><td>$700 – $1,000</td></tr>
+            <tr><td>Musicians (guitarist + violinist, three songs briefed)</td><td>$300 – $400</td></tr>
+            <tr><td>Florals (bouquet and small arrangement)</td><td>$400 – $800</td></tr>
+            <tr><td>Private dinner at a Kyoto kaiseki restaurant (six guests)</td><td>$1,000</td></tr>
+            <tr><td>MIJ planning fee</td><td>$5,000</td></tr>
+            <tr class="total-row"><td>Total estimated investment</td><td>$8,900 – $10,200</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="scenario-cost">
+        <div class="scenario-cost-header">
+          <h3>Scenario Three: Private Heritage Garden</h3>
+          <div class="scenario-cost-venue">Tairyu-Sanso · Private Morning Rental</div>
+        </div>
+        <table class="cost-table">
+          <thead>
+            <tr><th>Item</th><th>Estimated Range (USD)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tairyu-Sanso private rental (estimate, subject to confirmation)</td><td>$2,000 – $3,000</td></tr>
+            <tr><td>Editorial photographer (half-day, vetted)</td><td>$700 – $1,000</td></tr>
+            <tr><td>Musicians (guitarist + violinist, three songs briefed)</td><td>$300 – $400</td></tr>
+            <tr><td>Florals (bouquet and small arrangement)</td><td>$400 – $800</td></tr>
+            <tr><td>Private dinner at a Kyoto kaiseki restaurant (six guests)</td><td>$1,000</td></tr>
+            <tr><td>MIJ planning fee</td><td>$5,000</td></tr>
+            <tr class="total-row"><td>Total estimated investment</td><td>$9,400 – $11,200</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="section-dark large">
+  <div class="container">
+    <div class="prose-section fade-in" style="text-align: center;">
+      <span class="label">Next Steps</span>
+      <h2 style="color: var(--cream);">From here.</h2>
+      <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+    </div>
+
+    <div class="steps-grid fade-in">
+      <div>
+        <div class="step-number">01</div>
+        <div class="step-title">You React</div>
+        <p class="step-desc">On our next call, you tell us which scenario speaks to you. We refine the details, mix and match where useful, and answer anything you want to know.</p>
+      </div>
+      <div>
+        <div class="step-number">02</div>
+        <div class="step-title">We Inquire</div>
+        <p class="step-desc">We open formal inquiries with the chosen venue and lock in the photographer, musicians, florist, and dinner reservation. We come back with confirmed numbers within forty-eight hours.</p>
+      </div>
+      <div>
+        <div class="step-number">03</div>
+        <div class="step-title">You Commit</div>
+        <p class="step-desc">You sign and pay the deposit. From that moment, the day is ours to deliver.</p>
+      </div>
+    </div>
+
+    <div class="payment-terms">
+      Payment terms · 75% deposit to begin · 25% balance due two weeks before the ceremony
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="section-burgundy">
+  <div class="closing">
+    <h2>We'd love to build this with you.</h2>
+    <div class="closing-signature">Eamon &amp; Juri</div>
+    <div class="closing-mij">Married in Japan</div>
+  </div>
+</section>
+
+<script>
+  // Simple scroll-fade animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
